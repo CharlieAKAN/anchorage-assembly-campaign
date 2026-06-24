@@ -1001,7 +1001,7 @@ body::before {
 }
 
 .hero {
-  min-height: 100svh;
+  min-height: 88svh;
   isolation: isolate;
 }
 
@@ -1026,7 +1026,7 @@ body::before {
 
 .hero-content {
   width: min(100% - 2rem, var(--max));
-  padding: clamp(8rem, 18vh, 13rem) 0 14rem;
+  padding: clamp(6.5rem, 13vh, 10rem) 0 10.5rem;
 }
 
 .hero-content::after {
@@ -1052,23 +1052,23 @@ h2 {
 
 h1 {
   max-width: 1120px;
-  font-size: clamp(3.8rem, 9.4vw, 8.8rem);
-  line-height: 0.88;
+  font-size: clamp(3.2rem, 8vw, 7.4rem);
+  line-height: 0.9;
 }
 
 h2 {
-  font-size: clamp(3rem, 7vw, 6.8rem);
-  line-height: 0.88;
+  font-size: clamp(2.45rem, 5.4vw, 5.2rem);
+  line-height: 0.92;
 }
 
 h3 {
-  font-size: clamp(1.45rem, 3vw, 2.5rem);
+  font-size: clamp(1.25rem, 2.4vw, 2.1rem);
   line-height: 0.98;
 }
 
 .hero-copy {
   max-width: 740px;
-  font-size: clamp(1.18rem, 2vw, 1.55rem);
+  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
   font-weight: 850;
 }
 
@@ -1102,9 +1102,9 @@ h3 {
 }
 
 .hero-policy-strip a {
-  min-height: 128px;
-  padding: 1rem 1.1rem;
-  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  min-height: 98px;
+  padding: 0.85rem 1rem;
+  font-size: clamp(0.95rem, 1.25vw, 1.16rem);
 }
 
 .hero-policy-strip span {
@@ -1125,8 +1125,8 @@ h3 {
 
 .platform-section::before {
   display: block;
-  height: clamp(260px, 38vw, 460px);
-  margin-bottom: clamp(3rem, 7vw, 6rem);
+  height: clamp(190px, 28vw, 330px);
+  margin-bottom: clamp(2.25rem, 5vw, 4rem);
   border-bottom: 3px solid var(--ink);
   background:
     linear-gradient(90deg, rgba(32, 61, 52, 0.18), rgba(32, 61, 52, 0.74)),
@@ -1167,11 +1167,11 @@ h3 {
 
 .policy-card {
   display: grid;
-  grid-template-columns: 110px minmax(0, 0.85fr) minmax(250px, 0.7fr) auto;
+  grid-template-columns: 86px minmax(0, 0.85fr) minmax(250px, 0.8fr) auto;
   min-height: 0;
   align-items: center;
-  gap: clamp(1rem, 3vw, 2rem);
-  padding: clamp(1rem, 3vw, 2rem) 0;
+  gap: clamp(0.85rem, 2.2vw, 1.5rem);
+  padding: clamp(0.85rem, 2.15vw, 1.4rem) 0;
   border: 0;
   border-bottom: 3px solid var(--ink);
   border-radius: 0;
@@ -1186,8 +1186,8 @@ h3 {
 .policy-symbol {
   grid-column: 1;
   grid-row: 1 / span 3;
-  width: 92px;
-  height: 92px;
+  width: 70px;
+  height: 70px;
   margin: 0;
   border-radius: 0;
   box-shadow: none;
@@ -1203,13 +1203,13 @@ h3 {
   grid-column: 2;
   font-family: var(--display);
   font-weight: 950;
-  font-size: clamp(2.5rem, 6vw, 5.8rem);
-  line-height: 0.86;
+  font-size: clamp(2rem, 4.7vw, 4.4rem);
+  line-height: 0.9;
 }
 
 .policy-card p {
   grid-column: 3;
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
 }
 
 .policy-card .text-link {
@@ -1234,6 +1234,11 @@ h3 {
   background: var(--paper);
 }
 
+.section {
+  padding-top: clamp(3rem, 5.5vw, 4.75rem);
+  padding-bottom: clamp(3rem, 5.5vw, 4.75rem);
+}
+
 .values-list {
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
@@ -1242,8 +1247,8 @@ h3 {
 }
 
 .values-list article {
-  min-height: 220px;
-  padding: clamp(1rem, 2vw, 1.5rem);
+  min-height: 168px;
+  padding: clamp(0.85rem, 1.5vw, 1.15rem);
   border: 0;
   border-right: 3px solid var(--ink);
   border-bottom: 3px solid var(--ink);
@@ -1288,7 +1293,7 @@ select {
 .policy-hero {
   position: relative;
   display: grid;
-  min-height: 62svh;
+  min-height: 52svh;
   align-content: end;
   overflow: hidden;
   border-radius: 0;
