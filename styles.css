@@ -120,7 +120,11 @@ select {
   gap: 1rem;
   min-height: 76px;
   padding: 0.85rem clamp(1rem, 4vw, 3rem);
-  color: var(--white);
+  color: var(--ink);
+  background: rgba(239, 231, 209, 0.96);
+  border-bottom: 2px solid var(--ink);
+  box-shadow: 0 4px 0 rgba(32, 32, 29, 0.14);
+  backdrop-filter: blur(10px);
   transition:
     background 160ms ease,
     box-shadow 160ms ease,
@@ -130,10 +134,7 @@ select {
 .site-header.is-scrolled,
 .site-header.is-open {
   color: var(--ink);
-  background: rgba(242, 234, 219, 0.96);
-  border-bottom: 2px solid var(--ink);
-  box-shadow: 0 4px 0 rgba(32, 32, 29, 0.14);
-  backdrop-filter: blur(10px);
+  background: rgba(239, 231, 209, 0.98);
 }
 
 .brand {
