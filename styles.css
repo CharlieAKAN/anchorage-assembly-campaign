@@ -488,7 +488,6 @@ h3 {
 }
 
 .section-heading p:not(.eyebrow),
-.district-copy p,
 .events-section > div > p,
 .volunteer-copy p {
   color: var(--muted);
@@ -606,55 +605,6 @@ h3 {
 
 .color-green .policy-symbol {
   background: var(--green);
-}
-
-.district-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
-  align-items: center;
-}
-
-.district-section::before {
-  display: block;
-  grid-column: 1 / -1;
-  width: 96px;
-  height: 10px;
-  background: repeating-linear-gradient(90deg, var(--green) 0 16px, var(--gold) 16px 32px, #6a6f3e 32px 48px);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  content: "";
-}
-
-.district-panel {
-  display: grid;
-  background: var(--white);
-  border: 3px solid var(--ink);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.district-panel > div {
-  padding: 1.25rem;
-  border-bottom: 2px solid var(--ink);
-}
-
-.district-panel > div:last-child {
-  border-bottom: 0;
-}
-
-.metric {
-  display: block;
-  color: var(--green);
-  font-size: 2.5rem;
-  font-weight: 950;
-  line-height: 1;
-}
-
-.district-panel p {
-  margin: 0.55rem 0 0;
-  color: var(--muted);
-  font-weight: 700;
 }
 
 .values-list {
@@ -932,7 +882,6 @@ select {
     border-bottom: 0;
   }
 
-  .district-section,
   .events-section,
   .volunteer-section,
   .site-footer,
