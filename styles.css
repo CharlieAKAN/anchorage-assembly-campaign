@@ -955,3 +955,429 @@ select {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Editorial redesign overrides */
+:root {
+  --display:
+    "Arial Black", "Impact", "Inter Tight", "Arial Narrow", Inter, ui-sans-serif, system-ui,
+    sans-serif;
+  --max: 1240px;
+  --shadow: none;
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(32, 32, 29, 0.035) 1px, transparent 1px),
+    var(--paper);
+  background-size: 72px 72px;
+}
+
+body::before {
+  background:
+    linear-gradient(115deg, rgba(73, 111, 66, 0.12) 0 18%, transparent 18% 100%),
+    linear-gradient(72deg, transparent 0 70%, rgba(182, 138, 54, 0.11) 70% 78%, transparent 78% 100%);
+  background-size: 920px 540px, 760px 460px;
+}
+
+.site-header {
+  min-height: 72px;
+  padding-block: 0.65rem;
+  background: rgba(255, 249, 232, 0.98);
+  box-shadow: none;
+}
+
+.brand-mark {
+  box-shadow: none;
+}
+
+.site-nav a {
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.site-nav .nav-action {
+  box-shadow: none;
+}
+
+.hero {
+  min-height: 100svh;
+  isolation: isolate;
+}
+
+.hero::after {
+  position: absolute;
+  inset: 72px clamp(1rem, 4vw, 3rem) auto auto;
+  z-index: 2;
+  width: min(30vw, 360px);
+  height: 44svh;
+  pointer-events: none;
+  border: 3px solid rgba(255, 249, 232, 0.86);
+  background: rgba(182, 138, 54, 0.2);
+  mix-blend-mode: screen;
+  content: "";
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(20, 47, 39, 0.98) 0%, rgba(20, 47, 39, 0.82) 42%, rgba(20, 47, 39, 0.18) 100%),
+    linear-gradient(0deg, rgba(20, 47, 39, 0.82) 0%, rgba(20, 47, 39, 0.08) 56%);
+}
+
+.hero-content {
+  width: min(100% - 2rem, var(--max));
+  padding: clamp(8rem, 18vh, 13rem) 0 14rem;
+}
+
+.hero-content::after {
+  display: none;
+}
+
+.eyebrow,
+.policy-tag {
+  border-radius: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--display);
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+h1 {
+  max-width: 1120px;
+  font-size: clamp(3.8rem, 9.4vw, 8.8rem);
+  line-height: 0.88;
+}
+
+h2 {
+  font-size: clamp(3rem, 7vw, 6.8rem);
+  line-height: 0.88;
+}
+
+h3 {
+  font-size: clamp(1.45rem, 3vw, 2.5rem);
+  line-height: 0.98;
+}
+
+.hero-copy {
+  max-width: 740px;
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
+  font-weight: 850;
+}
+
+.hero-badges span,
+.button,
+.event-card,
+.signup-form,
+.values-list article,
+.detail-grid article {
+  box-shadow: none;
+}
+
+.hero-badges span {
+  border-radius: 0;
+}
+
+.button {
+  border-width: 3px;
+  border-radius: 0;
+}
+
+.button:hover {
+  transform: none;
+  box-shadow: inset 0 -6px 0 rgba(32, 32, 29, 0.18);
+}
+
+.hero-policy-strip {
+  width: min(100% - 2rem, var(--max));
+  box-shadow: none;
+  border-width: 3px;
+}
+
+.hero-policy-strip a {
+  min-height: 128px;
+  padding: 1rem 1.1rem;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+}
+
+.hero-policy-strip span {
+  font-size: 1rem;
+}
+
+.ridge-divider {
+  height: 42px;
+  background: var(--green);
+  border-bottom: 3px solid var(--ink);
+}
+
+.platform-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.platform-section::before {
+  display: block;
+  height: clamp(260px, 38vw, 460px);
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+  border-bottom: 3px solid var(--ink);
+  background:
+    linear-gradient(90deg, rgba(32, 61, 52, 0.18), rgba(32, 61, 52, 0.74)),
+    url("assets/anchorage-district-5-hero.png") center 45% / cover;
+  content: "";
+}
+
+.platform-section .section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.45fr);
+  gap: 1.5rem;
+  align-items: end;
+  max-width: var(--max);
+  padding: 0;
+  background: transparent;
+  border-left: 0;
+}
+
+.platform-section .section-heading .eyebrow {
+  grid-column: 1 / -1;
+  width: fit-content;
+}
+
+.platform-section .section-heading p:not(.eyebrow) {
+  margin: 0;
+  padding: 1rem;
+  color: var(--ink);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  font-size: 1.08rem;
+}
+
+.policy-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 3px solid var(--ink);
+}
+
+.policy-card {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 0.85fr) minmax(250px, 0.7fr) auto;
+  min-height: 0;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 3vw, 2rem) 0;
+  border: 0;
+  border-bottom: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.policy-card::before {
+  display: none;
+}
+
+.policy-symbol {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  width: 92px;
+  height: 92px;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+.policy-card .policy-tag {
+  grid-column: 2;
+  width: fit-content;
+}
+
+.policy-card h3 {
+  grid-column: 2;
+  font-family: var(--display);
+  font-weight: 950;
+  font-size: clamp(2.5rem, 6vw, 5.8rem);
+  line-height: 0.86;
+}
+
+.policy-card p {
+  grid-column: 3;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+
+.policy-card .text-link {
+  grid-column: 4;
+  align-self: center;
+  min-width: 118px;
+  justify-content: center;
+  padding: 0.75rem 0.9rem;
+  color: var(--ink);
+  background: var(--gold);
+  border: 2px solid var(--ink);
+  text-decoration: none;
+}
+
+.color-gold,
+.color-green,
+.color-blue {
+  background: transparent;
+}
+
+.section-light {
+  background: var(--paper);
+}
+
+.values-list {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 3px solid var(--ink);
+  border-left: 3px solid var(--ink);
+}
+
+.values-list article {
+  min-height: 220px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 0;
+  border-right: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  border-radius: 0;
+  background: var(--white);
+}
+
+.values-list article:nth-child(2n) {
+  background: var(--paper-2);
+}
+
+.values-list h3 {
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 950;
+}
+
+.events-section {
+  border-top: 3px solid var(--ink);
+}
+
+.event-card {
+  border-radius: 0;
+}
+
+.event-card time {
+  border-radius: 0;
+}
+
+.volunteer-section {
+  background:
+    linear-gradient(90deg, rgba(20, 47, 39, 0.96), rgba(20, 47, 39, 0.78)),
+    url("assets/anchorage-district-5-hero.png") center / cover;
+}
+
+.signup-form,
+input,
+select {
+  border-radius: 0;
+}
+
+.policy-hero {
+  position: relative;
+  display: grid;
+  min-height: 62svh;
+  align-content: end;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.policy-hero::after {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: 0;
+  width: min(42%, 520px);
+  opacity: 0.35;
+  background:
+    linear-gradient(90deg, rgba(255, 249, 232, 0.35), rgba(255, 249, 232, 0)),
+    url("assets/anchorage-district-5-hero.png") center / cover;
+  content: "";
+}
+
+.policy-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.policy-detail {
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+  border-top: 3px solid var(--ink);
+}
+
+.detail-grid article {
+  border-radius: 0;
+}
+
+@media (max-width: 900px) {
+  .hero::after {
+    display: none;
+  }
+
+  .hero {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero-content {
+    padding-bottom: 2rem;
+  }
+
+  .hero-policy-strip {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: min(100% - 2rem, var(--max));
+    margin: 0 auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: clamp(2.85rem, 13.2vw, 5rem);
+    line-height: 0.9;
+  }
+
+  .platform-section .section-heading,
+  .policy-card,
+  .policy-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-card {
+    padding: 1.25rem 0;
+  }
+
+  .policy-symbol,
+  .policy-card .policy-tag,
+  .policy-card h3,
+  .policy-card p,
+  .policy-card .text-link {
+    grid-column: 1;
+  }
+
+  .policy-symbol {
+    width: 64px;
+    height: 64px;
+    grid-row: auto;
+  }
+
+  .values-list {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-hero::after {
+    display: none;
+  }
+}
